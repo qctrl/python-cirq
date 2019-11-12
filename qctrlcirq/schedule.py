@@ -20,6 +20,8 @@ cirq.schedule
 
 import numpy as np
 
+import cirq
+
 from qctrlopencontrols import DynamicDecouplingSequence
 from qctrlopencontrols.exceptions.exceptions import ArgumentsValueError
 
@@ -30,7 +32,6 @@ def convert_dds_to_cirq_schedule(   #pylint: disable=too-many-locals
         gate_time=0.1,
         add_measurement=True,
         device=None):
-
     """Converts a Dynamic Decoupling Sequence into schedule
     as defined in cirq
 
@@ -81,11 +82,9 @@ def convert_dds_to_cirq_schedule(   #pylint: disable=too-many-locals
     instant calculated from the start of the sequence and continues for a duration
     of gate_time. This does not require identity gates to be placed between offsets.
 
-    Q-CTRL Open Controls support operation resulting in rotation around at most one axis at
+    Q-CTRL Cirq Adapter supports operation resulting in rotation around at most one axis at
     any offset.
     """
-
-    import cirq
 
     if dynamic_decoupling_sequence is None:
         raise ArgumentsValueError('No dynamic decoupling sequence provided.',

@@ -20,6 +20,8 @@ cirq.circuit
 
 import numpy as np
 
+import cirq
+
 from qctrlopencontrols import DynamicDecouplingSequence
 
 from qctrlopencontrols.exceptions.exceptions import ArgumentsValueError
@@ -87,11 +89,9 @@ def convert_dds_to_cirq_circuit(    #pylint: disable=too-many-locals
     the duration of the real-circuit is :math:`gate\\_time \\times number\\_of\\_identity\\_gates +
     pulse\\_gate\\_time \\times number\\_of\\_pulses`.
 
-    Q-CTRL Open Controls support operation resulting in rotation around at most one axis at
+    Q-CTRL Cirq Adapter supports operation resulting in rotation around at most one axis at
     any offset.
     """
-
-    import cirq
 
     if dynamic_decoupling_sequence is None:
         raise ArgumentsValueError('No dynamic decoupling sequence provided.',

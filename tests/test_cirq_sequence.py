@@ -21,7 +21,7 @@ Tests converstion to Cirq Circuit
 import cirq
 
 from qctrlopencontrols import new_predefined_dds
-from qiskitcirq import (
+from qctrlcirq import (
     convert_dds_to_cirq_circuit,
     convert_dds_to_cirq_schedule)
 

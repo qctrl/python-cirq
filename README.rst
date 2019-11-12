@@ -1,8 +1,8 @@
 
-Q-CTRL Qiskit Adaptor
-=====================
+Q-CTRL Cirq Adaptor
+===================
 
-The aim of the Q-CTRL Qiskit Adapter package is to provide export functions allowing
+The aim of the Q-CTRL Cirq Adapter package is to provide export functions allowing
 users to deploy established error-robust quantum control protocols from the
 open literature and defined in Q-CTRL Open Controls on IBM Quantum hardware.
 
@@ -21,14 +21,14 @@ Table of Contents
 Installation
 ------------
 
-Q-CTRL Qiskit Adaptor can be installed through ``pip`` or from source. We recommend
+Q-CTRL Cirq Adaptor can be installed through ``pip`` or from source. We recommend
 the ``pip`` distribution to get the most recent stable release. If you want the
 latest features then install from source.
 
 Requirements
 ^^^^^^^^^^^^
 
-To use Q-CTRL Qiskit Adaptor you will need an installation of Python. We
+To use Q-CTRL Cirq Adaptor you will need an installation of Python. We
 recommend using the `Anaconda <https://www.anaconda.com/>`_ distribution of
 Python. Anaconda includes standard numerical and scientific Python packages
 which are optimally compiled for your machine. Follow the `Anaconda
@@ -47,7 +47,7 @@ Use ``pip`` to install the latest version of Q-CTRL Qiskit Adaptor.
 
 .. code-block:: shell
 
-   pip install qctrl-qiskit
+   pip install qctrl-cirq
 
 From Source
 ^^^^^^^^^^^
@@ -58,7 +58,7 @@ cloned using
 
 .. code-block:: shell
 
-   git clone git@github.com:qctrl/python-qiskit.git
+   git clone git@github.com:qctrl/python-cirq.git
 
 Once the clone is complete, you have two options:
 
