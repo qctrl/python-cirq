@@ -37,7 +37,7 @@ jupyter notebook editor](https://jupyter.org/install) on its own.
 
 ### Using PyPi
 
-Use `pip` to install the latest version of Q-CTRL Qiskit Adaptor.
+Use `pip` to install the latest version of Q-CTRL Cirq Adaptor.
 
 ```shell
 pip install qctrl-cirq
@@ -46,7 +46,7 @@ pip install qctrl-cirq
 ### From Source
 
 The source code is hosted on
-[Github](https://github.com/qctrl/python-qiskit). The repository can be
+[Github](https://github.com/qctrl/python-cirq). The repository can be
 cloned using
 
 ```shell
@@ -58,7 +58,7 @@ Once the clone is complete, you have two options:
 1. Using setup.py
 
    ```shell
-   cd python-qiskit
+   cd python-cirq
    python setup.py develop
    ```
 
@@ -68,7 +68,7 @@ Once the clone is complete, you have two options:
 1. Using Poetry
 
    ```shell
-   cd python-qiskit
+   cd python-cirq
    ./setup-poetry.sh
    ```
 
@@ -76,13 +76,13 @@ Once the clone is complete, you have two options:
    [Poetry](https://poetry.eustace.io) manually, and use:
 
    ```bash
-   cd python-qiskit
+   cd python-cirq
    poetry install
    ```
 
 Once installed via one of the above methods, test your installation by running
 `pytest`
-in the `python-qiskit` directory.
+in the `python-cirq` directory.
 
 ```shell
 pytest
@@ -125,7 +125,7 @@ The generated HTML will appear in the `docs/_build/html` directory.
 ## Credits
 
 See
-[Contributors](https://github.com/qctrl/python-qiskit/graphs/contributors).
+[Contributors](https://github.com/qctrl/python-cirq/graphs/contributors).
 
 ## License
 
