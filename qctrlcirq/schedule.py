@@ -26,7 +26,7 @@ from qctrlopencontrols import DynamicDecouplingSequence
 from qctrlopencontrols.exceptions.exceptions import ArgumentsValueError
 
 
-def convert_dds_to_cirq_schedule(   #pylint: disable=too-many-locals
+def convert_dds_to_cirq_schedule(
         dynamic_decoupling_sequence,
         target_qubits=None,
         gate_time=0.1,
@@ -101,11 +101,8 @@ def convert_dds_to_cirq_schedule(   #pylint: disable=too-many-locals
             'Time delay of gates must be greater than zero.',
             {'gate_time': gate_time})
 
-    if target_qubits is None:
-        target_qubits = [cirq.LineQubit(0)]
-
-    if device is None:
-        device = cirq.UnconstrainedDevice
+    target_qubits = target_qubits or [cirq.LineQubit(0)]
+    device = device or cirq.devices.UNCONSTRAINED_DEVICE
 
     if not isinstance(device, cirq.Device):
         raise ArgumentsValueError('Device must be a cirq.Device type.',
@@ -136,14 +133,13 @@ def convert_dds_to_cirq_schedule(   #pylint: disable=too-many-locals
 
         rabi_rotation = dynamic_decoupling_sequence.rabi_rotations[offset_count]
         azimuthal_angle = dynamic_decoupling_sequence.azimuthal_angles[offset_count]
-        x_rotation = rabi_rotation * np.cos(azimuthal_angle)
-        y_rotation = rabi_rotation * np.sin(azimuthal_angle)
-        z_rotation = dynamic_decoupling_sequence.detuning_rotations[offset_count]
 
-        rotations = np.array([x_rotation, y_rotation, z_rotation])
-        zero_pulses = np.isclose(rotations, 0.0).astype(np.int)
-        nonzero_pulse_counts = 3 - np.sum(zero_pulses)
-        if nonzero_pulse_counts > 1:
+        rotations = np.array([
+            rabi_rotation * np.cos(azimuthal_angle),
+            rabi_rotation * np.sin(azimuthal_angle),
+            dynamic_decoupling_sequence.detuning_rotations[offset_count]])
+
+        if np.sum(np.isclose(rotations, 0.0).astype(np.int)) == 1:
             raise ArgumentsValueError(
                 'Open Controls support a sequence with one'
                 'valid pulse at any offset. Found sequence'
@@ -159,7 +155,7 @@ def convert_dds_to_cirq_schedule(   #pylint: disable=too-many-locals
             )
 
         for qubit in target_qubits:
-            if nonzero_pulse_counts == 0:
+            if np.sum(np.isclose(rotations, 0.0).astype(np.int)) == 0:
                 operation = cirq.ScheduledOperation(
                     time=cirq.Timestamp(nanos=offsets[op_idx]),
                     duration=cirq.Duration(nanos=gate_time),

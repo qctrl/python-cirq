@@ -28,7 +28,7 @@ from qctrlopencontrols.exceptions.exceptions import ArgumentsValueError
 from qctrlopencontrols.globals import (FIX_DURATION_UNITARY, INSTANT_UNITARY)
 
 
-def convert_dds_to_cirq_circuit(    #pylint: disable=too-many-locals
+def convert_dds_to_cirq_circuit(
         dynamic_decoupling_sequence,
         target_qubits=None,
         gate_time=0.1,
@@ -150,14 +150,12 @@ def convert_dds_to_cirq_circuit(    #pylint: disable=too-many-locals
             time_covered += gate_time
             circuit.append(gate_list)
 
-        x_rotation = rabi_rotation * np.cos(azimuthal_angle)
-        y_rotation = rabi_rotation * np.sin(azimuthal_angle)
-        z_rotation = detuning_rotation
+        rotations = np.array([
+            rabi_rotation * np.cos(azimuthal_angle),
+            rabi_rotation * np.sin(azimuthal_angle),
+            detuning_rotation])
 
-        rotations = np.array([x_rotation, y_rotation, z_rotation])
-        zero_pulses = np.isclose(rotations, 0.0).astype(np.int)
-        nonzero_pulse_counts = 3 - np.sum(zero_pulses)
-        if nonzero_pulse_counts > 1:
+        if np.sum(np.isclose(rotations, 0.0).astype(np.int)) == 1:
             raise ArgumentsValueError(
                 'Open Controls support a sequence with one '
                 'valid rotation at any offset. Found a sequence '
@@ -171,7 +169,7 @@ def convert_dds_to_cirq_circuit(    #pylint: disable=too-many-locals
 
         gate_list = []
         for qubit in target_qubits:
-            if nonzero_pulse_counts == 0:
+            if np.sum(np.isclose(rotations, 0.0).astype(np.int)) == 3:
                 gate_list.append(cirq.I(qubit))
             else:
                 if not np.isclose(rotations[0], 0.0):
