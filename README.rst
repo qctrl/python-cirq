@@ -2,7 +2,7 @@
 Q-CTRL Cirq Adaptor
 ===================
 
-The aim of the Q-CTRL Cirq Adapter package is to provide export functions allowing
+The aim of the Q-CTRL Cirq Adaptor package is to provide export functions allowing
 users to deploy established error-robust quantum control protocols from the
 open literature and defined in Q-CTRL Open Controls on Google quantum devices 
 and simulators.
