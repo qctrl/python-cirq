@@ -4,7 +4,7 @@ Q-CTRL Cirq Adapter
 
 Aim of the Q-CTRL Cirq Adapter package is to provide easy to use export functions
 allowing users to deploy the quantum controls techniques, define in Q-CTRL Open
-Controls, on IBMQ quantum hardware.
+Controls, on Google quantum devices and simulators.
 
 Installation
 ------------
