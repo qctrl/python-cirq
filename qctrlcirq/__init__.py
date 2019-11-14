@@ -18,7 +18,7 @@ qctrlcirq
 ===========
 """
 
-__version__ = "0.0.1"
+__version__ = "0.0.1pre3"
 
 from .circuit import convert_dds_to_cirq_circuit
 
