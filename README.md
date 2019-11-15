@@ -7,7 +7,6 @@ and simulators.
 
 Anyone interested in quantum control is welcome to contribute to this project.
 
-
 ## Table of Contents
 
 - [Installation](#installation)
