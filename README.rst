@@ -1,8 +1,8 @@
 
-Q-CTRL Cirq Adaptor
+Q-CTRL Cirq Adapter
 ===================
 
-The aim of the Q-CTRL Cirq Adaptor package is to provide export functions allowing
+The aim of the Q-CTRL Cirq Adapter package is to provide export functions allowing
 users to deploy established error-robust quantum control protocols from the
 open literature and defined in Q-CTRL Open Controls on Google quantum devices 
 and simulators.
@@ -22,14 +22,14 @@ Table of Contents
 Installation
 ------------
 
-Q-CTRL Cirq Adaptor can be installed through ``pip`` or from source. We recommend
+Q-CTRL Cirq Adapter can be installed through ``pip`` or from source. We recommend
 the ``pip`` distribution to get the most recent stable release. If you want the
 latest features then install from source.
 
 Requirements
 ^^^^^^^^^^^^
 
-To use Q-CTRL Cirq Adaptor you will need an installation of Python. We
+To use Q-CTRL Cirq Adapter you will need an installation of Python. We
 recommend using the `Anaconda <https://www.anaconda.com/>`_ distribution of
 Python. Anaconda includes standard numerical and scientific Python packages
 which are optimally compiled for your machine. Follow the `Anaconda
@@ -44,7 +44,7 @@ jupyter notebook editor <https://jupyter.org/install>`_ on its own.
 Using PyPi
 ^^^^^^^^^^
 
-Use ``pip`` to install the latest version of Q-CTRL Cirq Adaptor.
+Use ``pip`` to install the latest version of Q-CTRL Cirq Adapter.
 
 .. code-block:: shell
 
