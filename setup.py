@@ -24,7 +24,7 @@ if os.path.exists(readme_path):
 setup(
     long_description=readme,
     name='qctrl-cirq',
-    version='0.0.3',
+    version='0.0.4',
     description='Q-CTRL Cirq Adapter',
     python_requires='<3.9,>=3.6.4',
     project_urls={"repository": "https://github.com/qctrl/python-cirq"},
