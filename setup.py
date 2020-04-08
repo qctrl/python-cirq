@@ -34,7 +34,7 @@ setup(
     keywords='quantum computing open source engineering cirq',
     classifiers=['Development Status :: 5 - Production/Stable', 'Environment :: Console', 'Intended Audience :: Developers', 'Intended Audience :: Education', 'Intended Audience :: Science/Research', 'License :: OSI Approved :: Apache Software License', 'Natural Language :: English', 'Operating System :: OS Independent', 'Programming Language :: Python :: 3.6', 'Topic :: Scientific/Engineering :: Physics', 'Topic :: Scientific/Engineering :: Visualization', 'Topic :: Software Development :: Embedded Systems', 'Topic :: System :: Distributed Computing'],
     packages=['qctrlcirq'],
-    package_dir={"": ""},
+    package_dir={"": "."},
     package_data={},
     install_requires=['cirq==0.*,>=0.6.0', 'numpy==1.*,>=1.16.0', 'qctrl-open-controls==4.*,>=4.3.0', 'scipy==1.*,>=1.3.0', 'toml==0.*,>=0.10.0'],
     extras_require={"dev": ["nbval==0.*,>=0.9.5", "pylama", "pylint", "pylint-runner", "pytest", "qctrl-visualizer==2.*,>=2.1.0", "sphinx==2.*,>=2.2.0"]},
