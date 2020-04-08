@@ -104,10 +104,10 @@ def test_cirq_circuit_operation():
     state with different pre-post gates parameters in cirq circuits
     """
     _check_circuit_output(False, convert_dds_to_cirq_circuit, 0)
-    _check_circuit_output(True, convert_dds_to_cirq_circuit, 1)
+    _check_circuit_output(True, convert_dds_to_cirq_circuit, 0)
 
     _check_circuit_output(False, convert_dds_to_cirq_schedule, 0)
-    _check_circuit_output(True, convert_dds_to_cirq_schedule, 1)
+    _check_circuit_output(True, convert_dds_to_cirq_schedule, 0)
 
 
 if __name__ == '__main__':
