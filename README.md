@@ -1,6 +1,4 @@
-# Q-CTRL Cirq Adapter
-[![Actions Status](https://github.com/qctrl/python-cirq/workflows/Push%20workflow/badge.svg)](https://github.com/qctrl/python-cirq/actions?query=workflow%3A"Push+workflow")
-[![Actions Status](https://github.com/qctrl/python-cirq/workflows/Release%20workflow/badge.svg)](https://github.com/qctrl/python-cirq/actions?query=workflow%3A"Release+workflow")
+# Q-CTRL Cirq
 
 The aim of the Q-CTRL Cirq Adapter package is to provide export functions allowing
 users to deploy established error-robust quantum control protocols from the
