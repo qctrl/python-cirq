@@ -25,7 +25,7 @@ setup(
     long_description=readme,
     name='qctrl-cirq',
     version='0.0.4',
-    description='Q-CTRL Cirq',
+    description='Q-CTRL Python Cirq',
     python_requires='<3.9,>=3.6.4',
     project_urls={"documentation": "", "homepage": "https://q-ctrl.com", "repository": "https://github.com/qctrl/python-cirq"},
     author='Q-CTRL',
