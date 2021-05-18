@@ -1,4 +1,6 @@
-# Q-CTRL Python Cirq
+
+Q-CTRL Python Cirq
+==================
 
 The aim of the Q-CTRL Cirq Adapter package is to provide export functions allowing
 users to deploy established error-robust quantum control protocols from the
