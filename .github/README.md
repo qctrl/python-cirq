@@ -7,14 +7,6 @@ and simulators.
 
 Anyone interested in quantum control is welcome to contribute to this project.
 
-## Table of Contents
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [Credits](#credits)
-- [License](#license)
-
 ## Installation
 
 Q-CTRL Cirq Adapter can be installed through `pip` or from source. We recommend
