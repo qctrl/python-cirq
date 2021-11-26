@@ -26,7 +26,7 @@ setup(
     name='qctrl-cirq',
     version='0.0.4',
     description='Q-CTRL Python Cirq',
-    python_requires='<3.9,>=3.6.4',
+    python_requires='<3.9,>=3.7',
     project_urls={"documentation": "", "homepage": "https://q-ctrl.com", "repository": "https://github.com/qctrl/python-cirq"},
     author='Q-CTRL',
     author_email='support@q-ctrl.com',
@@ -36,6 +36,6 @@ setup(
     packages=['qctrlcirq'],
     package_dir={"": "."},
     package_data={},
-    install_requires=['cirq==0.*,>=0.6.0', 'numpy==1.*,>=1.16.0', 'qctrl-open-controls==4.*,>=4.3.0', 'scipy==1.*,>=1.3.0', 'toml==0.*,>=0.10.0'],
-    extras_require={"dev": ["nbval==0.*,>=0.9.5", "pylama", "pylint", "pylint-runner", "pytest", "qctrl-visualizer==2.*,>=2.1.0", "sphinx==2.*,>=2.2.0"]},
+    install_requires=['cirq==0.*,>=0.6.0', 'numpy==1.*,>=1.16.0', 'qctrl-open-controls==8.*,>=8.5.1', 'scipy==1.*,>=1.3.0', 'toml==0.*,>=0.10.0'],
+    extras_require={"dev": ["nbval==0.*,>=0.9.5", "pylama", "pylint", "pylint-runner", "pytest", "qctrl-visualizer==2.*,>=2.12.1", "sphinx==2.*,>=2.2.0"]},
 )

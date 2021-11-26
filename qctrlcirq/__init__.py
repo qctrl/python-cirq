@@ -25,5 +25,6 @@ from .circuit import convert_dds_to_cirq_circuit
 from .schedule import convert_dds_to_cirq_schedule
 
 __all__ = [
-    'convert_dds_to_cirq_circuit',
-    'convert_dds_to_cirq_schedule']
+    "convert_dds_to_cirq_circuit",
+    "convert_dds_to_cirq_schedule",
+]
