@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "qctrl-cirq"
 version = "0.0.5"
-description = "Q-CTRL Python Cirq"
+description = "Q-CTRL Python Cirq (deprecated)"
 license = "Apache-2.0"
 authors = ["Q-CTRL <support@q-ctrl.com>"]
 maintainers = ["Q-CTRL <support@q-ctrl.com>"]
